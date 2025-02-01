@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character encoding and responsive viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Food Store</title>
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/Header.css">
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <main>
+        <!-- Header section containing logo, search and user options -->
+        <header>
+            <!-- Logo container -->
+            <div class="logo">
+                <img src="/images/logo-image.png" alt="Organic Food Store Logo">
+            </div>
+            <!-- Search bar container -->
+            <div class="search">
+                <input type="text" placeholder="Search Product..." aria-label="Search products">
+                <button type="button" aria-label="Search"><i class="material-icons">search</i></button>
+            </div>
+            <!-- User options container (login and cart) -->
+            <div class="third">
+                <!-- Login/Account section -->
+                <div class="login">
+                    <i class="material-icons" aria-hidden="true">person</i>
+                    <a href="#" aria-label="Account and Login">Account
+                        <br>
+                        <span>Login</span>
+                    </a>
+                </div>
+                <!-- Shopping cart section -->
+                <div class="cart">
+                    <i class="material-icons" aria-hidden="true">shopping_cart</i>
+                    <a href="#" aria-label="Shopping Cart">Cart
+                        <br>
+                        <span>0 Items</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <section id="menu-section2">
+            <div class="menu-section-left">
+                <div class="categories">
+                    <i class="material-icons" aria-hidden="true">menu</i>
+                    <span>All Categories</span>
+                    <i class="material-icons" aria-hidden="true">keyboard_arrow_down</i>
+                </div>
+            </div>
+
+            <nav class="menu-section-center">
+                <div class="menu-section-center-box">
+                    <ul>
+                        <li><a href="#" aria-current="page">Home</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="menu-section-right">
+                <div class="location">
+                    <i class="material-icons" aria-hidden="true">location_on</i>
+                    <select name="location" id="location" aria-label="Select location">
+                        <option value="pakistan">Pakistan</option>
+                        <option value="india">India</option>
+                        <option value="usa">USA</option>
+                        <option value="uk">UK</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+        <section id="slider-main" aria-label="Featured Products Slider">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slider-animation-text">
+                            <p>Starting at $ <b>20.00</b></p>
+                            <h1 class="slider-animation-title">Organic &amp; healthy <br> vegetables</h1>
+                            <div class="slider-animation-btn">
+                                <a href="#" class="slider-animation-btn-link">Shop Now <i class="material-icons" aria-hidden="true">keyboard_double_arrow_right</i></a>
+                            </div>
+                        </div>
+                        <img src="/images/slider-1.jpg" alt="Fresh organic vegetables">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-animation-text">
+                            <p>Starting at $ <b>29.99</b></p>
+                            <h1 class="slider-animation-title">Explore fresh &amp; <br> juicy fruits</h1>
+                            <div class="slider-animation-btn">
+                                <a href="#" class="slider-animation-btn-link">Shop Now <i class="material-icons" aria-hidden="true">keyboard_double_arrow_right</i></a>
+                            </div>
+                        </div>
+                        <img src="/images/slider-2.jpg" alt="Fresh juicy fruits">
+                    </div>
+                </div>
+                <div class="swiper-button-next" aria-label="Next slide"></div>
+                <div class="swiper-button-prev" aria-label="Previous slide"></div>
+                <div class="swiper-pagination"></div>
+                <div class="autoplay-progress" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20"></circle>
+                    </svg>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="Deals-product-section" aria-label="Daily Deals">
+            <div class="Deals-product-section-top">
+                <div class="title-box">
+                    <h2 class="gi-title">Day of the <span>deal</span></h2>
+                    <p>Don't wait. The time will never be just right.</p>
+                </div>
+                <div class="Deals-product-section-top-right">
+                    <div class="deal-timer" role="timer" aria-label="Deal countdown timer">
+                        <div class="timer-box">
+                            <span id="days" aria-label="days">00</span>
+                        </div>
+                        <div class="timer-box">
+                            <span id="hours" aria-label="hours">00</span>
+                        </div>
+                        <div class="timer-box">
+                            <span id="minutes" aria-label="minutes">00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Deals-product-section-bottom">
+              
+              
+            </div>
+        </section>
+
+        <section id="descount-banner">
+            <img src="/images/banner-1.jpg" alt="Descount Banner">
+            <div class="descount-banner-text">
+                <h2>Fresh Fruits <br>Healthy Products</h2>
+                <h3>30% off sale <span>Hurry up!!!</span></h3>
+                <a href="#" class="descount-banner-btn">Shop Now <i class="material-icons" aria-hidden="true">keyboard_double_arrow_right</i></a>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JavaScript file -->
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
