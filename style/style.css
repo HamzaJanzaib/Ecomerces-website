@@ -222,6 +222,19 @@ body {
     background-color: white;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    position: relative;
+}
+
+.varity {
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    background-color: red;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
 }
 
 .card-image-box {
@@ -332,7 +345,7 @@ body {
     color: red;
 }
 
-#descount-banner{
+#descount-banner {
     height: 40vh;
     width: 100%;
     background-color: #F5F5F5;

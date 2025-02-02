@@ -61,6 +61,7 @@ const dealsProduct = [
         newPrice: 49.00,
         category: 'Fruit',
         availability: 'In stock',
+        varity: "new",
     },
     {
         id: 2,
@@ -72,6 +73,7 @@ const dealsProduct = [
         newPrice: 30.33,
         category: 'Tuber root',
         availability: 'Out of stock',
+        varity: "",
     },
     {
         id: 3,
@@ -83,6 +85,7 @@ const dealsProduct = [
         newPrice: 38.63,
         category: 'Cookies',
         availability: 'In stock',
+        varity: "sale",
     },
     {
         id: 4,
@@ -94,6 +97,7 @@ const dealsProduct = [
         newPrice: 38.63,
         category: 'Dried Fruits',
         availability: 'In stock',
+        varity: "new"
     },
     {
         id: 5,
@@ -105,6 +109,8 @@ const dealsProduct = [
         newPrice: 18.63,
         category: 'Foods',
         availability: 'Out of stock',
+        varity: "",
+
     },
     {
         id: 6,
@@ -116,6 +122,7 @@ const dealsProduct = [
         newPrice: 42.13,
         category: 'Dried Fruits',
         availability: 'In stock',
+        varity: "sale",
     },
 ]
 
@@ -150,6 +157,7 @@ dealsProduct.forEach((element, index) => {
                         <div class="stock">
                             <span>${element.availability}</span>
                         </div>
+                        <div class="varity"> ${element.varity}</div>
                     </div>
                 </div>
     `;
@@ -166,3 +174,105 @@ document.querySelectorAll('.stock span').forEach(stockSpan => {
         stockSpan.style.color = '#FF0000'; // Red color
     }
 });
+
+document.querySelectorAll(".varity").forEach(varity =>{
+    if(varity.textContent === "sale"){
+        varity.style.color = '#FF0000';
+    } else if(varity.textContent === "new"){
+        varity.style.color = '#5CAF90';
+    }else{
+        varity.style.display = "none" ;
+    }
+})
+
+// Deals product object
+const newArival = [
+    {
+        id: 1.2,
+        name: 'Sungold Kiwifruit Punnet',
+        image: '/images/secound-obj-1.jpg',
+        rating: 4.3,
+        waight: '500g',
+        oldPrice: 39.60,
+        newPrice: 33.00,
+        category: 'Fruit',
+        availability: 'In stock',
+        descripation: "Golden and gloriously sweet. Zespri™ SunGold™ Kiwifruit taste delicious with a sweet and juicy flavour, making them perfect for a snack or breakfast. Just 1 Zespri™ SunGold™ Kiwifruit provides 100% of your daily vitamin C needs, contributing to a healthy immune system. They’re also Low GI and Low Fodmap.",
+        varity: "new",
+    },
+    {
+        id: 2.2,
+        name: ' American Cream & Onion Flavour.',
+        image: '/images/secound-obj-2.jpg',
+        rating: 3.7,
+        waight: '200g',
+        oldPrice: 37.38,
+        newPrice: 29.33,
+        category: 'snacks',
+        availability: 'Out of stock',
+        varity: "",
+    },
+    {
+        id: 3.2,
+        name: 'Dates Value Fresh Pouch',
+        image: '/images/secound-obj-3.jpg',
+        rating: 3.9,
+        waight: '5kg',
+        oldPrice: 85.40,
+        newPrice: 66.30,
+        category: 'Dried Fruits',
+        availability: 'In stock',
+        varity: "sale",
+    },
+    {
+        id: 4.2,
+        name: 'Fresh Mango juice pack',
+        image: '/images/secound-obj-4.jpg',
+        rating: 3.3,
+        waight: '1kg',
+        oldPrice: 21.20,
+        newPrice: 16.05,
+        category: 'Fresh Fruit',
+        availability: 'In stock',
+        varity: "new"
+    },
+    {
+        id: 5.2,
+        name: 'Sweet Corn',
+        image: '/images/product-5.jpg',
+        rating: 4.9,
+        waight: '3 pcs',
+        oldPrice: 17.20,
+        newPrice: 10.00,
+        category: 'Vegetables',
+        availability: 'Out of stock',
+        varity: "",
+
+    },
+    {
+        id: 6.2,
+        name: 'Kamalam Fruit',
+        image: '/images/product-6.jpg',
+        rating: 5.0,
+        waight: '6pcs',
+        oldPrice: 80.20,
+        newPrice: 60.13,
+        category: 'Fresh Fruit',
+        availability: 'In stock',
+        varity: "sale",
+    },
+    {
+        id: 6.2,
+        name: 'Blue berry',
+        image: '/images/product-7.jpg',
+        rating: 3.0,
+        waight: '8pcs',
+        oldPrice: 30.00,
+        newPrice: 26.13,
+        category: 'Fresh Fruit',
+        availability: 'In stock',
+        varity: "new",
+    },
+]
+
+
