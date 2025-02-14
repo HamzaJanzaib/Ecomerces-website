@@ -1,15 +1,16 @@
 #Register-section {
-    height: 100vh;
+    height: 100%;
     width: 100%;
+    margin: 5% auto;
 }
 
 .section-box {
     width: 60%;
     height: 100%;
-    margin: auto;
+    margin: 30px auto;
 }
 
-#Register-section-top{
+#Register-section-top {
     width: 100%;
     height: 15%;
     display: flex;
@@ -18,55 +19,61 @@
     justify-content: center;
 }
 
-#Register-section-top h1{
+#Register-section-top h1 {
     color: #4B5966;
     font-size: 32px;
-}
-#Register-section-top p{
-    color: #4B5966;
-    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
-#Register-form{
+#Register-section-top p {
+    color: #4B5966;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#Register-form {
     height: 70%;
     margin-top: 5%;
     width: 100%;
     border-radius: 10px;
     border: 1px solid #4b59663d;
     padding: 20px;
+    
 }
 
-.Register-form-top{
-    height: 60%;
+.Register-form-top {
+    height: 50%;
     width: 100%;
     display: flex;
 }
 
-.Register-form-top-left{
+.Register-form-top-left {
     width: 50%;
     height: 100%;
     padding: 10px;
 }
-.Register-form-top-right{
+
+.Register-form-top-right {
     width: 50%;
     height: 100%;
     padding: 10px;
-
 }
 
-label{
+label {
     display: block;
     font-size: 20px;
     text-transform: capitalize;
     color: #4B5966;
     margin-bottom: 10px;
 }
-label::after{
+
+label::after {
     content: "*";
     color: red;
 }
 
-input{
+input {
     height: 12%;
     width: 100%;
     padding: 10px 20px;
@@ -74,8 +81,14 @@ input{
     border-radius: 8px;
     outline: none;
     margin-bottom: 3px;
+    transition: border-color 0.3s ease;
 }
-select{
+
+input:focus {
+    border-color: #5CAF90;
+}
+
+select {
     height: 12%;
     width: 100%;
     padding: 10px 20px;
@@ -84,29 +97,62 @@ select{
     color: #4B5966;
     outline: none;
     margin-bottom: 5px;
+    transition: border-color 0.3s ease;
 }
-option{
+
+select:focus {
+    border-color: #5CAF90;
+}
+
+option {
     color: #4B5966;
 }
 
-.Rfb-top{
+.Rfb-top {
     height: 15%;
     width: 100%;
     padding: 10px;
 }
-.Rfb-bottum{
+
+.Rfb-bottum {
     width: 100%;
     padding: 10px;
     display: flex;
+    height: 40%;
 }
 
-.Rfbb-left{
+.Rfbb-left {
     width: 50%;
     height: 100%;
     padding: 10px;
 }
-.Rfbb-right{
+
+.Rfbb-right {
     width: 50%;
     padding: 10px;
     height: 100%;
+}
+
+.button-box {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-box button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5CAF90;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-box button:hover {
+    background-color: #4B5966;
 }

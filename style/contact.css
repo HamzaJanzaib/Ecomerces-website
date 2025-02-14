@@ -106,3 +106,15 @@ input{
 .login-form-right .login-image-box img:hover{
     transform: scale(1.2);
 }
+#message{
+    width: 100%;
+}
+#message textarea{
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 3px;
+}

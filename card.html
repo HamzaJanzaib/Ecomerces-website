@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Cart-page</title>
     <!-- CSS stylesheets -->
-    <link rel="stylesheet" href="/style/Header.css">
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="stylesheet" href="/style/login.css">
+    <link rel="stylesheet" href="./style/Header.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/cart.css">
     <!-- Google Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Font Awesome Icons -->
@@ -24,7 +24,7 @@
         <header>
             <!-- Logo container -->
             <div class="logo">
-                <img src="/images/logo-image.png" alt="Organic Food Store Logo">
+                <img src="./images/logo-image.png" alt="Organic Food Store Logo">
             </div>
             <!-- Search bar container -->
             <div class="search">
@@ -36,7 +36,7 @@
                 <!-- Login/Account section -->
                 <div class="login">
                     <i class="material-icons" aria-hidden="true">person</i>
-                    <a href="#" aria-label="Account and Login">Account
+                    <a href="register.html" aria-label="Account and Login">Account
                         <br>
                         <span>Login</span>
                     </a>
@@ -64,10 +64,10 @@
             <nav class="menu-section-center">
                 <div class="menu-section-center-box">
                     <ul>
-                        <li><a href="index.html" aria-current="page">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="/Ecomerces-website/ecommerce.html" aria-current="page">Home</a></li>
+                        <li><a href="/Ecomerces-website/shop.html">shop</a></li>
+                        <li><a href="/Ecomerces-website/about.html">about</a></li>
+                        <li><a href="/Ecomerces-website/contact.html">contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -88,39 +88,59 @@
 
 
 
-        <section id="login-section">
-            <div class="section-box">
-                <div id="login-section-top">
-                    <h1>Login</h1>
-                    <p>Get access to your Orders, Wishlist <br>and Recommendations.</p>
+
+        <div id="card">
+            <div class="card-top">
+                <div class="card-top">
+                    <h4>Shopping Cart</h4>
+                    <h4>Home > <span> Cart</span></h4>
                 </div>
-
-                <form id="Register-form">
-                    <div class="login-form-left">
-                        <label for="userName">user Name</label>
-                        <input type="text" id="userName" placeholder="Enter your user Name">
-                        <label for="Email">Email</label>
-                        <input type="Email" id="Email" placeholder="Email@gmail.com">
-                        <label for="password">password</label>
-                        <input type="password" id="password" placeholder="Enter your password">
-                        <div class="button-box">
-                            <h4><a href="/html/register.html">
-                                    Create Account?
-                                </a></h4>
-                            <button>Login</button>
-                        </div>
-                    </div>
-                    <div class="login-form-right">
-                        <div class="login-image-box">
-                            <img src="/images/login.png" alt="">
-                        </div>
-                    </div>
-
-                </form>
             </div>
-        </section>
 
+            <div class="card-bottom">
+                <table>
+                    <tr>
+                        <td>Product</td>
+                        <td>Price</td>
+                        <td>Quantity</td>
+                        <td>Total</td>
+                        <td>Action</td>
+                    </tr>
+                    <tr>
 
+                        <td class="td-image-main">
+                            <div class="td-image">
+                                <img src="/images/secound-obj-1.webp" alt="Multi Grain Combo Cookies">
+                                <h4>Multi Grain Combo Cookies</h4>
+                            </div>
+                        </td>
+                        <td>$30</td>
+                        <td class="quantity-cell">
+                            <button class="quantity-btn">-</button>
+                            <span>1</span>
+                            <button class="quantity-btn">+</button>
+                        </td>
+                        <td>$30</td>
+                        <td><i id="delete-btn" class="material-icons" aria-hidden="true">delete</i></td>
+                    </tr>
+                   
+                    
+
+                  
+                </table>
+
+                <div class="cart-actions">
+                    <div class="cart-summary">
+                        <span>Total: </span>
+                        <span class="cart-total">$230</span>
+                    </div>
+                    <div class="cart-buttons">
+                        <a href="/Ecomerces-website/shop.html" class="continue-shopping">Continue Shopping</a>
+                        <button class="checkout-btn">Check Out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -129,11 +149,11 @@
 
         <footer id="footer">
             <div class="footer-left">
-                <img src="/images/logo-image.png" alt="">
+                <img src="./images/logo-image.png" alt="">
                 <p>Grabit is the biggest market of grocery products. Get your daily needs from our store.</p>
                 <div class="foter-socal">
-                    <img src="/images/android.webp" alt="">
-                    <img src="/images/apple.webp" alt="">
+                    <img src="./images/android.webp" alt="">
+                    <img src="./images/apple.webp" alt="">
                 </div>
             </div>
 
@@ -183,7 +203,11 @@
                 </div>
             </div>
         </footer>
+
+
     </main>
+    <script src="/js/script.js"></script>
+    <script src="/js/cart.js"></script>
 </body>
 
 </html>

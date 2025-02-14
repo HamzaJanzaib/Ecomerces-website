@@ -52,7 +52,7 @@ const dealsProduct = [
     {
         id: 1,
         name: 'Natural Hub Cherry Karonda',
-        image: '/images/product-1.webp',
+        image: './images/product-1.webp',
         rating: 4.5,
         waight: '1kg',
         oldPrice: 65.00,
@@ -64,7 +64,7 @@ const dealsProduct = [
     {
         id: 2,
         name: 'Fresh Mango juice pack',
-        image: '/images/product-2.webp',
+        image: './images/product-2.webp',
         rating: 2.5,
         waight: '600ml',
         oldPrice: 35.38,
@@ -76,7 +76,7 @@ const dealsProduct = [
     {
         id: 3,
         name: 'Multi Grain Combo Cookies',
-        image: '/images/product-3.webp',
+        image: './images/product-3.webp',
         rating: 3.9,
         waight: '5kg',
         oldPrice: 45.20,
@@ -88,7 +88,7 @@ const dealsProduct = [
     {
         id: 4,
         name: 'Natural Hub Cherry Karonda',
-        image: '/images/product-4.webp',
+        image: './images/product-4.webp',
         rating: 3.3,
         waight: '5kg',
         oldPrice: 45.20,
@@ -100,7 +100,7 @@ const dealsProduct = [
     {
         id: 5,
         name: 'Stick Fiber Masala Magic',
-        image: '/images/product-5.webp',
+        image: './images/product-5.webp',
         rating: 4.5,
         waight: '2kg',
         oldPrice: 20.20,
@@ -112,7 +112,7 @@ const dealsProduct = [
     {
         id: 6,
         name: 'Mixed Nuts Berries Pack',
-        image: '/images/product-6.webp',
+        image: './images/product-6.webp',
         rating: 4.5,
         waight: '1.5kg',
         oldPrice: 49.20,
@@ -189,7 +189,7 @@ const newArival = [
     {
         id: 1.2,
         name: 'Sungold Kiwifruit Punnet',
-        image: '/images/secound-obj-1.webp',
+        image: './images/secound-obj-1.webp',
         rating: 4.3,
         waight: '500g',
         oldPrice: 39.60,
@@ -202,7 +202,7 @@ const newArival = [
     {
         id: 2.2,
         name: 'American Cream & Onion Flavour',
-        image: '/images/secound-obj-2.webp',
+        image: './images/secound-obj-2.webp',
         rating: 3.7,
         waight: '200g',
         oldPrice: 37.38,
@@ -214,7 +214,7 @@ const newArival = [
     {
         id: 3.2,
         name: 'Dates Value Fresh Pouch',
-        image: '/images/secound-obj-3.webp',
+        image: './images/secound-obj-3.webp',
         rating: 3.9,
         waight: '5kg',
         oldPrice: 85.40,
@@ -226,7 +226,7 @@ const newArival = [
     {
         id: 4.2,
         name: 'Fresh Mango juice pack',
-        image: '/images/secound-obj-4.webp',
+        image: './images/secound-obj-4.webp',
         rating: 3.3,
         waight: '1kg',
         oldPrice: 21.20,
@@ -238,7 +238,7 @@ const newArival = [
     {
         id: 5.2,
         name: 'Sweet Corn',
-        image: '/images/secound-obj-5.webp',
+        image: './images/secound-obj-5.webp',
         rating: 4.9,
         waight: '3 pcs',
         oldPrice: 17.20,
@@ -250,7 +250,7 @@ const newArival = [
     {
         id: 6.2,
         name: 'Kamalam Fruit',
-        image: '/images/secound-obj-6.webp',
+        image: './images/secound-obj-6.webp',
         rating: 5.0,
         waight: '6pcs',
         oldPrice: 80.20,
@@ -262,7 +262,7 @@ const newArival = [
     {
         id: 7.2,
         name: 'Blue berry',
-        image: '/images/secound-obj-7.webp',
+        image: './images/secound-obj-7.webp',
         rating: 3.3,
         waight: '8pcs',
         oldPrice: 30.00,
@@ -274,7 +274,7 @@ const newArival = [
     {
         id: 8.2,
         name: 'Pineapple',
-        image: '/images/secound-obj-8.webp',
+        image: './images/secound-obj-8.webp',
         rating: 4.0,
         waight: '1pcs',
         oldPrice: 22.00,
@@ -286,7 +286,7 @@ const newArival = [
     {
         id: 9.2,
         name: 'Mixed Nuts & Almonds Dry Fruits',
-        image: '/images/secound-obj-9.webp',
+        image: './images/secound-obj-9.webp',
         rating: 4.6,
         waight: '500g',
         oldPrice: 49.00,
@@ -298,7 +298,7 @@ const newArival = [
     {
         id: 10.2,
         name: 'Berry & Grapes',
-        image: '/images/secound-obj-10.webp',
+        image: './images/secound-obj-10.webp',
         rating: 2.6,
         waight: '500g',
         oldPrice: 49.00,
@@ -319,35 +319,35 @@ const blogProducts = [
     {
         id: 3.1,
         name: 'Marketing Guide: 5 Steps to Success to way.',
-        image: '/images/blog-1.webp',
+        image: './images/blog-1.webp',
         date: "June 30, 2024",
         category: "Organic",
     },
     {
         id: 3.2,
         name: 'Best way to solve business deal issue in market.',
-        image: '/images/blog-2.webp',
+        image: './images/blog-2.webp',
         date: "April 02, 2024",
         category: "Fruits",
     },
     {
         id: 3.3,
         name: 'Marketing Guide: 5 Steps to Success to way.',
-        image: '/images/blog-3.webp',
+        image: './images/blog-3.webp',
         date: "Mar 09, 2024",
         category: "Vegetables",
     },
     {
         id: 3.4,
         name: 'Business ideas to grow your business traffic.',
-        image: '/images/blog-4.webp',
+        image: './images/blog-4.webp',
         date: "January 25, 2024",
         category: "Fastfood",
     },
     {
         id: 3.5,
         name: 'Marketing Guide: 5 Steps way to Success.',
-        image: '/images/blog-5.webp',
+        image: './images/blog-5.webp',
         date: "December 10, 2024",
         category: "Fruits",
     }
@@ -370,3 +370,42 @@ blogProducts.forEach((element, index) => {
 });
 blogBottom.innerHTML = blogHtml;
 
+
+
+
+
+const productGrid = document.querySelector(".products-grid");
+let cardBox = "";
+
+newArival.forEach((element, index) => {
+    cardBox += `
+           <div class="card-box">
+            <div class="card-image-box">
+                <img src="${element.image}" alt="${element.name}">
+            </div>
+            <p>${element.category}</p>
+            <h2>${element.name}</h2>
+            <div class="card-rating-box">
+                <div class="rating">
+                    <span>(${element.rating})<i class="material-icons" aria-hidden="true">star</i></span>
+                </div>
+                <div class="waight">
+                    <span>${element.waight}</span>
+                </div>
+            </div>
+            <div class="card-price-box">
+                <span id="new-price">$${element.newPrice.toFixed(2)}</span>
+                <span id="old-price">$${element.oldPrice.toFixed(2)}</span>
+            </div>
+            <div class="card-icon-box">
+                <i class="material-icons" data-index="${index}" id="cart-icon" aria-hidden="true">shopping_cart</i>
+                <i class="material-icons" data-index="${index}" id="details-icon" aria-hidden="true">info</i>
+                <div class="stock">
+                    <span>${element.availability}</span>
+                </div>
+                <div class="varity">${element.varity}</div>
+            </div>
+        </div>
+    `;
+});
+productGrid.innerHTML = cardBox;
