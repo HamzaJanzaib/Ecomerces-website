@@ -124,6 +124,8 @@ const dealsProduct = [
 ];
 
 function renderProducts(products, container) {
+    if (!container) return; // Guard clause if container doesn't exist
+    
     let html = "";
     products.forEach((element, index) => {
         html += `
@@ -146,7 +148,7 @@ function renderProducts(products, container) {
                 <span id="old-price">$${element.oldPrice.toFixed(2)}</span>
             </div>
             <div class="card-icon-box">
-                <i class="material-icons" data-index="${index}" id="cart-icon" aria-hidden="true">shopping_cart</i>
+                <i class="material-icons add-to-cart" data-product='${JSON.stringify(element)}' aria-hidden="true">shopping_cart</i>
                 <i class="material-icons" data-index="${index}" id="details-icon" aria-hidden="true">info</i>
                 <div class="stock">
                     <span>${element.availability}</span>
@@ -157,13 +159,70 @@ function renderProducts(products, container) {
         `;
     });
     container.innerHTML = html;
+
+    // Add click event listeners to cart icons
+    const cartIcons = container.querySelectorAll('.add-to-cart');
+    cartIcons.forEach(icon => {
+        icon.addEventListener('click', function() {
+            const productData = JSON.parse(this.getAttribute('data-product'));
+            addToCart(productData);
+        });
+    });
 }
 
-// Render deals products
-const productCard = document.querySelector('.Deals-product-section-bottom');
-renderProducts(dealsProduct, productCard);
+// Cart functionality
+function addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const existingProduct = cart.find(item => item.id === product.id);
+    
+    if (existingProduct) {
+        existingProduct.quantity = (existingProduct.quantity || 1) + 1;
+    } else {
+        cart.push({
+            ...product,
+            quantity: 1
+        });
+    }
+    
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartItemCount();
+    alert('Product added to cart!');
+}
 
-// Update stock color based on availability
+function updateCartItemCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+    const cartCountElement = document.querySelector('.cart span');
+    if (cartCountElement) {
+        cartCountElement.textContent = `${totalItems} Items`;
+    }
+}
+
+// Initialize page functionality
+document.addEventListener('DOMContentLoaded', () => {
+    updateCartItemCount();
+    
+    // Render products if containers exist
+    const productCard = document.querySelector('.Deals-product-section-bottom');
+    if (productCard) {
+        renderProducts(dealsProduct, productCard);
+    }
+
+    const arivalContainer = document.querySelector('.new-arival-bottum');
+    if (arivalContainer) {
+        renderProducts(newArival, arivalContainer);
+    }
+
+    // Update styles
+    updateStockAndVarietyStyles();
+    
+    // Render blog if container exists
+    const blogBottom = document.querySelector(".blog-bottum");
+    if (blogBottom) {
+        renderBlogPosts(blogBottom);
+    }
+});
+
 function updateStockAndVarietyStyles() {
     document.querySelectorAll('.stock span').forEach(stockSpan => {
         stockSpan.style.color = stockSpan.textContent.trim() === 'In stock' ? '#5CAF90' : '#FF0000';
@@ -178,11 +237,25 @@ function updateStockAndVarietyStyles() {
         } else {
             varity.style.display = "none";
         }
-
     });
 }
 
-updateStockAndVarietyStyles();
+function renderBlogPosts(container) {
+    let blogHtml = "";
+    blogProducts.forEach((element, index) => {
+        blogHtml += `
+            <div class="blog-box">
+                <div class="image-box">
+                    <img src="${element.image}" alt="${element.name}">
+                </div>
+                <h5>${element.date} - <strong>${element.category}</strong></h5>
+                <h2>${element.name}</h2>
+                <button data-index="${index}">Read More</button>
+            </div>
+        `;
+    });
+    container.innerHTML = blogHtml;
+}
 
 // New Arrival products
 const newArival = [
@@ -309,11 +382,6 @@ const newArival = [
     }
 ];
 
-// Render new arrival products
-const arival = document.querySelector(".new-arival-bottum");
-renderProducts(newArival, arival);
-updateStockAndVarietyStyles();
-
 // Blog products
 const blogProducts = [
     {
@@ -353,20 +421,4 @@ const blogProducts = [
     }
 ];
 
-// Render blog posts
-const blogBottom = document.querySelector(".blog-bottum");
-let blogHtml = "";
-blogProducts.forEach((element, index) => {
-    blogHtml += `
-        <div class="blog-box">
-            <div class="image-box">
-                <img src="${element.image}" alt="${element.name}">
-            </div>
-            <h5>${element.date} - <strong>${element.category}</strong></h5>
-            <h2>${element.name}</h2>
-            <button data-index="${index}">Read More</button>
-        </div>
-    `;
-});
-blogBottom.innerHTML = blogHtml;
 
